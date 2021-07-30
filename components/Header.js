@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header>
       <div>
-        <Link href="/">
+        <Link href="/" passHref>
           <h2>Technology Blog</h2>
         </Link>
       </div>
