@@ -7,18 +7,18 @@ cover_image: "/images/posts/concurrency.jpg"
 
 ## What is concurrency in Web Development:
 
+<hr/>
+
 Concurrency is a vital part of Web Development, why do I say this? The reason is in today's world web applications service hundres, thousands and in some cases millions of users at the same time.
 
-Concurrency allows the application to be able to handle and process requests to access the same data from multiple users. An example of an application that supports multiple user interactions simultaneously is an e-commerce website such as Amazon or Takealot.
+Concurrency allows the application to be able to handle and process multiple requests simultaneously. So concurrency takes place when there are a number of operations runnining simulataneously.
 
-When we think of these types of websites it becomes easier to understand how much 'background work" is taking place in order to make these websites function as they do. These types of websites provide the ability for Admin Users to edit/update, delete and add products while cusotmers are shopping and purchasing products, all of these operations will be updating/modifying the data in a concurrent state.
+An example of an application that supports multiple user interactions simultaneously is an e-commerce website such as Amazon or Takealot.
 
-#### Resource used:
+When we think of these types of websites it becomes easier to understand how much "background work" is taking place in order to make these websites function as they do. These types of websites provide the ability for Admin Users to edit/update, delete and add products while customers are shopping and purchasing products, all of these operations will be updating/modifying the data in a concurrent state.
 
-##### Title: What is application concurrency?
+## References:
 
-##### Date Published: June 16, 2009
+- [spec-india.com](https://www.spec-india.com/blog/what-is-application-concurrency)
 
-##### Author: SPEC INDIA
-
-##### Link to article: [https://www.spec-india.com/blog/what-is-application-concurrency](https://www.spec-india.com/blog/what-is-application-concurrency)
+- [toptal.com](https://www.toptal.com/software/introduction-to-concurrent-programming)

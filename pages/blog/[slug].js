@@ -16,6 +16,7 @@ export default function PostPage({
       </Link>
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
+        <hr />
         <div className="post-date">Posted on {date}</div>
         <img src={cover_image} alt="" />
         <div className="post-body">
