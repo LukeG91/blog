@@ -34,7 +34,7 @@ The register forms part of the CPU of the device and it's role is to store data.
 
 A thread is the unit of execution that is present in a process. Processes have the ability to contain multiple threads, however a thread is not able to contain a process. In a scenario whereby the process contains a single thread it is known as a single-threaded process, in such an instance the process and the thread are the same. These types of processes are only capable of completing/achieving a single goal/task.
 
-Threads that contain multiple processes are known as multi-threaded processes.
+Threads that contain multiple processes are known as multi-threaded processes, these processes can accomplish several things at pretty much the same time.
 
 ## References:
 
