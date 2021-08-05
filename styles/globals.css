@@ -116,3 +116,9 @@ header a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==================== Header Component ====================== */
+
+.headerComponentContainer{
+  text-align: center;
+}

@@ -34,7 +34,13 @@ The register forms part of the CPU of the device and it's role is to store data.
 
 A thread is the unit of execution that is present in a process. Processes have the ability to contain multiple threads, however a thread is not able to contain a process. In a scenario whereby the process contains a single thread it is known as a single-threaded process, in such an instance the process and the thread are the same. These types of processes are only capable of completing/achieving a single goal/task.
 
-Threads that contain multiple processes are known as multi-threaded processes, these processes can accomplish several things at pretty much the same time.
+Threads that contain multiple processes are known as multi-threaded processes, these processes can accomplish several things at pretty much the same time. Threads contain their own stack but can also access shared data in the heap, due to this threads are known as lightweight processes. Due to threads sharing the same space as the process and the other threads, the operational cost of communication between threads is low. An important concept is that unlike a process, an issue with one thread in a process will affect other threads and the viability of the process as a whole.
+
+#### Implementation of concurrency in Web Development:
+
+As multiple threads share and occupy the same address space and in turn share global variables as well as state, this in turn provides the ability to implement mutual features for all of the request handlers, these include shared cache for cacheable responses within the web server.
+
+Another method of implementing concurrency in your applications is by using the preforking strategy. Preforking will prompt the main server process will fork multiple copies of the 'Request Handler Process' when the system starts up. More likely than not, the thread-safe socket descriptor will be distributed and shared with all relevannt processes. Each of the processes that now contain the descriptor will block new connections, handle the currenct connection as well as be on stand by awaiting the next incomin request/connection.
 
 ## References:
 
