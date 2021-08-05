@@ -52,6 +52,10 @@ I/O functions that are performed within Node.js applications are known as non-bl
 
 #### What role does asynchronous programming play in concurrency:
 
+The asynchronous programming approach is a huge part of concurrency in Node.js as this approach allows for the application to process multiple requests simultaneously which is what the concurrent programming methodology is based on. When looking at it this way it is easy to understand the importance of the asynchronous programming approach in Node.js.
+
+#### How are Web API's related to implementing concurrency:
+
 ## References:
 
 - [https://medium.com/](https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510)

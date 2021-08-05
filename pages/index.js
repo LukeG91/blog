@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import Post from "../components/Post";
 import { sortByDate } from "../utils";
+import AboutMe from "../components/AboutMe";
 
 export default function Home({ posts }) {
   return (
@@ -11,6 +12,8 @@ export default function Home({ posts }) {
       <Head>
         <title>The Coding Wizard || Blog</title>
       </Head>
+
+      <AboutMe />
 
       <div className="posts">
         {posts.map((post, index) => (
