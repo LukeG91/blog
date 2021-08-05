@@ -14,7 +14,7 @@ Concurrency allows the application to be able to handle and process multiple req
 
 Concurrency allows the performance of a program to be bumped up due to it's ability to run multiple processes and tasks simultaneously. An example where this can be very useful is when there is a task that will take a large amount of time to complete, it can run while the other smaller/regular process of the application are running.
 
-When we think of real world examples of concurrent pieces of software, for me the first type of software that comes to mind is an operating system. Computers, mobile phones, laptops and tablets now all have powerful CPU's that can handle many processes at the same time allowing the operating system to run multiple applications at the same time. The more advanced the CPU and the more RAM in the device the more operations the device will be able to handle at the same time.
+When we think of real world examples of concurrent pieces of software, for me the first type of software that comes to mind is an operating system. Computers, mobile phones, laptops and tablets now all have powerful CPU's that can handle many processes at the same time allowing the operating system to run multiple applications concurrently. The more advanced the CPU and the more RAM in the device the more operations the device will be able to handle concurrently.
 
 There are 2 basic units involved in concurrency, these units are name processes and threads. Software programs are built using code from various programming languages available today, these programmes are stored on a HDD or SSD or in non-volatile memory. Non-volatile memory computer memory that can store information even after power has been removed from the machine. In order for the software programme to run it requires memory as well as other system resources.
 
@@ -40,9 +40,23 @@ Threads that contain multiple processes are known as multi-threaded processes, t
 
 As multiple threads share and occupy the same address space and in turn share global variables as well as state, this in turn provides the ability to implement mutual features for all of the request handlers, these include shared cache for cacheable responses within the web server.
 
-Another method of implementing concurrency in your applications is by using the preforking strategy. Preforking will prompt the main server process will fork multiple copies of the 'Request Handler Process' when the system starts up. More likely than not, the thread-safe socket descriptor will be distributed and shared with all relevannt processes. Each of the processes that now contain the descriptor will block new connections, handle the currenct connection as well as be on stand by awaiting the next incomin request/connection.
+Another method of implementing concurrency in your applications is by using the preforking strategy. Preforking will prompt the main server process will fork multiple copies of the 'Request Handler Process' when the system starts up. More likely than not, the thread-safe socket descriptor will be distributed and shared with all relevannt processes. Each of the processes that now contain the descriptor will block new connections, handle the currenct connection as well as be on stand by awaiting the next incomin request/connection. However, as the structure of a process is not streamlined the amount of concurrenct connections that it is able to handle will be limited. I worked on Apache web servers for over 5 years and I know that this web server provides a module that is based on preforking and it is a multi-processing module called Apache-MPM, this is the default multi-processing module for systems UNIX based Apache systems/servers. (_source_ - [http://berb.github.io](http://berb.github.io/diploma-thesis/original/042_serverarch.html))
+
+### Implementing concurrency with Node.js
+
+<hr/>
+
+Node.js supports the event-driven programming approach as it allows for asynchronous programming which means that is supports concurrency. This makes Node.js a fantastic choice to write very well running and efficient applications.
+
+I/O functions that are performed within Node.js applications are known as non-blocking functions which means that these operations will run asynchronously while the application takes on other requests and process other lines of code while the I/O function is running, this is an example of how concurrency is implemented in Node.js applications. (_source_ - [https://medium.com](https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510))
+
+#### What role does asynchronous programming play in concurrency:
 
 ## References:
+
+- [https://medium.com/](https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510)
+
+- [berb.github.io](http://berb.github.io/diploma-thesis/original/042_serverarch.html)
 
 - [spec-india.com](https://www.spec-india.com/blog/what-is-application-concurrency)
 
