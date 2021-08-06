@@ -60,7 +60,14 @@ In the modern world of technology building custom API's to achieve a specific go
 
 #### What is the event-loop in Javascript and how does it relate to concurrency:
 
+The JavaScript event-loop is an extremely important and integral part of the JavaScript language as it provides a base for the asynchronous programming style that JavaScript supports. Operations are carried out o a single thread, however with the use of multiple data structures a system similar to multi-threading is produced. So what goes on behind the scenes of an event loop and how does it work? Let's break it down. Firstly, the functions that need to be performed are stored within the call stack and once a function has completed that specific function will be removed(popped) from the stack.
+
+Another integral part of the event-loop is the event queue, this is where the instructions relating to new functions that need to be run are sent from,
+they are sent to the track where the functions are processed. In order to ensure that each function/operation is run in the correct order, there is a data structure called 'queue' which comes into play which handles this part of the operation.
+
 ## References:
+
+- [https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript](https://www.educative.io/edpresso/what-is-an-event-loop-in-javascript)
 
 - [https://medium.com/](https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510)
 
