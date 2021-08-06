@@ -93,7 +93,7 @@ Oracle provides the concurrency in their databases by implementing a transaction
 
 This approach can come with a downside if there are multiple applications running concurrently all using this approach/mode can have an adverse effect on the applications productivity. If all of the transactions that are running concurrently are isolated this can then result in an unwanted outcome such as a transaction that is trying to run being unuable to perform an operation such as an insert into a table that is being queried by another transaction that is running on the database. It is therefore best to have a compromise between the isolation of the transaction running on the database and the database performance.
 
-Oracle provides two isolation levels that are available, this gives developers certain modes that assist to provide very good performace as well as data consistency. The two isolation methods that
+Oracle provides two isolation levels that are available, this gives developers certain modes that assist to provide very good performace as well as data consistency. The two isolation methods that are offered by Oracle are the "read committed" and "serializable" isolation methods. A read-only mode is also provided which does not form part of SQL92, another important point to note is that the default method is "read committed".
 
 #### How MongoDB supports DB concurrency:
 
