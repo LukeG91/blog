@@ -141,6 +141,10 @@ header a {
   padding: 5px;
 }
 
+.aboutMeParagraphContainer{
+  max-width: 825px;
+}
+
 /* ==================== Footer Component ====================== */
 
 .footerContainer{

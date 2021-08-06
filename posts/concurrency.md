@@ -87,7 +87,13 @@ Modern browser's that we use today contain browser API's. When an asynchronous f
 
 <hr style="width: 39%"/>
 
-This section is coming soon...
+Oracle provides the concurrency in their databases by implementing a transaction isolation model that is known as 'serializability'. "The serializable mode of transaction behavior tries to ensure that transactions run in such a way that they appear to be executed one at a time, or serially, rather than concurrently." <br />
+<span style="color: red; text-decoration: underline">Original source:</span> <br />
+[https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5700](https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5700)
+
+This approach can come with a downside if there are multiple applications running concurrently all using this approach/mode can have an adverse effect on the applications productivity. If all of the transactions that are running concurrently are isolated this can then result in an unwanted outcome such as a transaction that is trying to run being unuable to perform an operation such as an insert into a table that is being queried by another transaction that is running on the database. It is therefore best to have a compromise between the isolation of the transaction running on the database and the database performance.
+
+Oracle provides two isolation levels that are available, this gives developers certain modes that assist to provide very good performace as well as data consistency. The two isolation methods that
 
 #### How MongoDB supports DB concurrency:
 

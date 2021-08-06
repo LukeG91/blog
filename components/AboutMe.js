@@ -13,7 +13,7 @@ export default function AboutMe() {
           height={400}
         />
       </div>
-      <div>
+      <div className="aboutMeParagraphContainer">
         <p>
           Hello and welcome to my blog. My name is Luke Glendining, a 30 year
           old technology and code lover. I am writing about what I learn to help
