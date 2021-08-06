@@ -85,9 +85,9 @@ Modern browser's that we use today contain browser API's. When an asynchronous f
 
 #### How Oracle supports DB concurrecy:
 
-This section is coming soon...
-
 <hr style="width: 39%"/>
+
+This section is coming soon...
 
 #### How MongoDB supports DB concurrency:
 
