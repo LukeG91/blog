@@ -15,11 +15,12 @@ export default function AboutMe() {
       </div>
       <div className="aboutMeParagraphContainer">
         <p className="aboutMeParagraph">
-          Hello and welcome to my blog. My name is Luke Glendining, a 30 year
-          old technology and code lover. I am writing about what I learn to help
-          others gain more knowledge on programming and tech in general and also
-          to improve my own knowledge and understanding of concepts by writing
-          and teaching others.
+          Hello and welcome to my blog. My name is Luke Glendining, I am a 30
+          year old technology and code lover. I will be blogging about some of
+          the topics that I learn throughout my coding journey in order to share
+          my knowledge and to help others gain more knowledge on programming and
+          tech in general. I am also working towards improving my own knowledge
+          and understanding of concepts by writing and teaching others.
         </p>
       </div>
     </div>
