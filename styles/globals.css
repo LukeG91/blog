@@ -65,8 +65,8 @@ header a {
 }
 
 .btn-back{
-  background: #f4f4f4;
-  color: #000;
+  background: steelblue;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -81,7 +81,7 @@ header a {
   padding: 15px;
   border: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color: black;
+  background-color: #261C2C;
   color: #fff;
 }
 
@@ -148,7 +148,7 @@ header a {
   margin-right: auto;
   display: flex;
   padding: 5px;
-  background-color: black;
+  background-color: #261C2C;
   color: whitesmoke;
 }
 
