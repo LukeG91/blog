@@ -95,6 +95,11 @@ This approach can come with a downside if there are multiple applications runnin
 
 Oracle provides two isolation levels that are available, this gives developers certain modes that assist to provide very good performace as well as data consistency. The two isolation methods that are offered by Oracle are the "read committed" and "serializable" isolation methods. A read-only mode is also provided which does not form part of SQL92, another important point to note is that the default method is "read committed".
 
+In order to ensure the consistency of the data that is stored in a multi-user setup, Oracle makes use of a specific model, this is known as a 'multiversion consistency model". Combined with this are transactions as well as different types of locking.
+If you would like to learn more about this topic, please see the original information source by browsing to the following link:
+<br/>
+[https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5702](https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5702)
+
 #### How MongoDB supports DB concurrency:
 
 <hr style="width: 44%"/>
