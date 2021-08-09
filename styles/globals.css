@@ -26,7 +26,7 @@ img{
 }
 
 header{
-  background: steelblue;
+  background: #261C2C;
   color: #fff;
   padding: 5px;
   margin-bottom: 40px;
@@ -81,6 +81,8 @@ header a {
   padding: 15px;
   border: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color: black;
+  color: #fff;
 }
 
 .card-page{
@@ -95,6 +97,7 @@ header a {
   background: #f4f4f4;
   margin-bottom: 20px;
   padding: 3px 10px;
+  color: black;
 }
 
 .post-body ul, ol {
@@ -145,6 +148,8 @@ header a {
   margin-right: auto;
   display: flex;
   padding: 5px;
+  background-color: black;
+  color: whitesmoke;
 }
 
 .aboutMeImageContainer{

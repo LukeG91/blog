@@ -12,7 +12,7 @@ export default function PostPage({
   return (
     <>
       <Link href="/">
-        <a className="btn btn-back">Go back</a>
+        <a className="btn btn-back">Home</a>
       </Link>
       <div className="card card-page">
         <h1 className="post-title">{title}</h1>
