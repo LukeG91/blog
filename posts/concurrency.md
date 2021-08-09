@@ -5,9 +5,7 @@ excerpt: "This article discusses what concurrency is and how this concept is app
 cover_image: "/images/posts/concurrency.jpg"
 ---
 
-## What is concurrency in Web Development:
-
-<hr style="width: 68%"/>
+## <span style="text-decoration: underline">What is concurrency in Web Development:</span>
 
 Concurrency is a vital part of Web Development, why do I say this? The reason is in today's world web applications service hundres, thousands and in some cases millions of users at the same time.
 Concurrency allows the application to be able to handle and process multiple requests simultaneously.
@@ -18,13 +16,9 @@ When we think of real world examples of concurrent pieces of software, for me th
 
 There are 2 basic units involved in concurrency, these units are name processes and threads. Software programs are built using code from various programming languages available today, these programmes are stored on a HDD or SSD or in non-volatile memory. Non-volatile memory is computer memory that can store information even after power has been removed from the machine. In order for the software programme to run it requires memory as well as other system resources.
 
-### Processes and Threads:
+### <span style="text-decoration: underline">Processes and Threads:</span>
 
-<hr style="width: 30%"/>
-
-#### Processes:
-
-<hr style="width: 11%"/>
+#### <span style="text-decoration: underline">Processes:</span>
 
 A process symbolises a program that has been loaded into memory along with the resources that it requires to run successfully. All software programmes require vital resources such as _registers_, a _program counter_ and a _stack_.
 
@@ -32,26 +26,20 @@ Each instance of a running program is a process, it is possible to have many dif
 
 The register forms part of the CPU of the device and it's role is to store data. The register is able to store an instruction that the program needs to follow, a storage address or any other data that is needed by the process. The _program_ counter keeps track of where the device is in it's program sequence. The stack is a data structure that stores information about the active sub routines of a computer program, this is used for scratch space for the process.
 
-#### Threads:
-
-<hr style="width: 10%"/>
+#### <span style="text-decoration: underline">Threads:</span>
 
 A thread is the unit of execution that is present in a process. Processes have the ability to contain multiple threads, however a thread is not able to contain a process. In a scenario whereby the process contains a single thread it is known as a single-threaded process, in such an instance the process and the thread are the same. These types of processes are only capable of completing/achieving a single goal/task.
 
 Threads that contain multiple processes are known as multi-threaded processes, these processes can accomplish several things at pretty much the same time. Threads contain their own stack but can also access shared data in the heap, due to this threads are known as lightweight processes. Due to threads sharing the same space as the process and the other threads, the operational cost of communication between threads is low. An important concept is that unlike a process, an issue with one thread in a process will affect other threads and the processes ability to function successfully.
 
-#### Implementation of concurrency in Web Development:
-
-<hr style="width: 58%"/>
+#### <span style="text-decoration: underline">Implementation of concurrency in Web Development:</span>
 
 As multiple threads share and occupy the same address space and in turn share global variables as well as state, this provides the ability to implement mutual features for all of the request handlers, these include shared cache for cacheable responses within the web server.
 
 Another method of implementing concurrency in your applications is by using the preforking strategy. Preforking will prompt the main server process to fork multiple copies of the 'Request Handler Process' when the system starts up. More likely than not, the thread-safe socket descriptor will be distributed and shared with all relevannt processes. Each of the processes that now contain the descriptor will block new connections, handle the currenct connection as well as be on standby awaiting the next incoming request/connection. However, as the structure of a process is not streamlined the amount of concurrenct connections that it is able to handle will be limited. I worked on Apache web servers for over 5 years and I know that this web server provides a module that is based on preforking and it is a multi-processing module called Apache-MPM, this is the default multi-processing module for UNIX based Apache systems/servers. <br/>
 <a href="http://berb.github.io/diploma-thesis/original/042_serverarch.html" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
 
-### Implementing concurrency with Node.js
-
-<hr style="width: 50%;"/>
+### <span style="text-decoration: underline">Implementing concurrency with Node.js:</span>
 
 Node.js supports the event-driven programming approach as it allows for asynchronous programming which means that is supports concurrency. This makes Node.js a fantastic choice to write very well running and efficient applications.
 
@@ -59,21 +47,15 @@ I/O functions that are performed within Node.js applications are known as non-bl
 <br/>
 <a href="https://medium.com/platformer-blog/node-js-concurrency-with-async-await-and-promises-b4c4ae8f4510" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
 
-#### What role does asynchronous programming play in concurrency:
-
-<hr style="width: 70%"/>
+#### <span style="text-decoration: underline">What role does asynchronous programming play in concurrency:</span>
 
 The asynchronous programming approach is a huge part of concurrency in Node.js as this approach allows for the application to process multiple requests simultaneously which is what the concurrent programming methodology is based on. When looking at it this way it is easy to understand the importance of the asynchronous programming approach in Node.js.
 
-#### How are Web API's related to implementing concurrency:
-
-<hr style="width: 61%"/>
+#### <span style="text-decoration: underline">How are Web API's related to implementing concurrency:</span>
 
 In the modern world of technology building custom API's to achieve a specific goal is very common and they are very useful tools which form vital parts of the Web Development world. API endpoints are set to perform a specific set of tasks in a specific order, and API's built using Node.js support asynchronous programming which is a massive part of currency in Node.js. API's that serve as endpoints to websites such as E-commerce or online booking sites to give a few examples can handle multiple requests concurrently and in turn are related to implementing concurrency in web development.
 
-#### What is the event-loop in Javascript and how does it relate to concurrency:
-
-<hr style="width: 81%"/>
+#### <span style="text-decoration: underline">What is the event-loop in Javascript and how does it relate to concurrency:</span>
 
 The JavaScript event-loop is an extremely important and integral part of the JavaScript language as it provides a base for the asynchronous programming style that JavaScript supports. Operations are carried out on a single thread, however with the use of multiple data structures a system similar to multi-threading is produced. The event-loop needs to take care of running code, processing, querying and storing the next processes that are still to be run. Due to the role that it plays and how it works it forms a crucial part of concurrent programming in JavaScript. So what goes on behind the scenes of an event loop and how does it work? Let's break it down. Firstly, the functions that need to be performed are stored within the call stack and once a function has completed that specific function will be removed(popped) from the stack.
 
@@ -81,13 +63,9 @@ Another integral part of the event-loop is the event queue, this is where the in
 
 Modern browser's that we use today contain browser API's. When an asynchronous function is called, it will be sent over to the client/browser API. Instructions will now be received from the call stack and the browser API will begin a single-threaded operation. The next step in this process is for the operation to be sent over to the 'event queue'. This is where the event-loop comes into play as it is responsible for checking whether the call stack has any functions to pass over. If the call stack does not currently contian any functions then any new functions that come in will be added to the call stack from the event queue. However, if there is a function present in the call stack then that particular function will be processed.
 
-### Comparison between how Oracle and MongoDB support DB concurrency:
+### <span style="text-decoration: underline">Comparison between how Oracle and MongoDB support DB concurrency:</span>
 
-<hr style="width: 92.5%"/>
-
-#### How Oracle supports DB concurrecy:
-
-<hr style="width: 39%"/>
+#### <span style="text-decoration: underline">How Oracle supports DB concurrecy:</span>
 
 Oracle provides concurrency in their databases by implementing a transaction isolation model that is known as 'serializability'. "The serializable mode of transaction behavior tries to ensure that transactions run in such a way that they appear to be executed one at a time, or serially, rather than concurrently." <br />
 <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5700" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
@@ -101,15 +79,11 @@ If you would like to learn more about this topic, please see the original inform
 <br/>
 <a href="https://docs.oracle.com/cd/B19306_01/server.102/b14220/consist.htm#i5702" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
 
-#### How MongoDB supports DB concurrency:
-
-<hr style="width: 44%"/>
+#### <span style="text-decoration: underline">How MongoDB supports DB concurrency:</span>
 
 In order to ensure data consistency while allowing multiple clients to have read and write access to the same data, MongoDB employs locking and 'concurrency control' which is in place to stop clients from changing/updating the data at the same time. Database writes to single documents will happen and will complete in one process, so in other words the process needs to run fully and complete or it shouldn't run, this way MongoDB ensures that the clients are provided with accurate and consistent data.
 
-### Concurrency control:
-
-<hr style="width: 27%"/>
+### <span style="text-decoration: underline">Concurrency control:</span>
 
 <p style="font-size:12px">"Concurrency control ensures that database operations can be executed concurrently without compromising correctness. Pessimistic concurrency control, such as used in systems with locks, will block any potentially conflicting operations even if they may not turn out to actually conflict. Optimistic concurrency control, the approach used by WiredTiger, will delay checking until after a conflict may have occurred, aborting and retrying one of the operations involved in any write conflict that arises."</p>
 
@@ -124,9 +98,7 @@ Reader-writer locks are part of the locking process that is employed by the Mong
 In order to provide more context into the locking that MongoDB employs, we can take a look at an example provided in the MongoDB documentation. When a collection within a database is locked for a writing operation,this will be done using the exclusive locking mode and will ensure that the corresponding database lock as well as the global lock will be locked using the intent exclusive locking method. Another important bit of information to note is the following which I have quoted directly from the MongoDB documentation: "A single database can simultaneously be locked in IS and IX mode, but an exclusive (X) lock cannot coexist with any other modes, and a shared (S) lock can only coexist with intent shared (IS) locks."
 <a href="https://docs.mongodb.com/manual/faq/concurrency/" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
 
-### <span style="color: red">References:</span>
-
-<hr style="width: 14.5%"/>
+### <span style="color: red; text-decoration: underline">References:</span>
 
 <div style="font-size: 12px; color: red">
 <br/>
