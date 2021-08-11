@@ -23,17 +23,15 @@ This is a mathematical function that is a polynomial function which contains eit
 
 An example of JavaScript code that runs using quadratic time(O(n²)) would be a recursive Fibonacci sequence algorithm, I have included a code example below:
 
-<div style="color: black">
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-right: 5%; padding-left: 5%">
 
-```javascript
-let recursiveFibonacciAlgorithm = (n) => {
-  if (n === 1 || n === 2) return 1;
-  return (
+<p>
+    let recursiveFibonacciAlgorithm = (n) => <br/>{</br> 
+    if (n === 1 || n === 2) return 1;
+    return (
     recursiveFibonacciAlgorithm(n - 1) + recursiveFibonacciAlgorithm(n - 2)
-  );
-};
-```
-
+    )<br/>};
+</p>
 </div>
 
 <a href="https://developerinsider.co/big-o-notation-explained-with-examples/" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
@@ -57,22 +55,23 @@ The binary search compares the available data by checking the middle value/eleme
 
 #### <span style="text-decoration: underline">Linear search algorithm:</span>
 
-<div style="color: black">
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-left: 5%; padding-right: 5%">
 
-```javascript
-let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"];
+<p>
 
-let linearAlgorithm = (data, target) => {
-  for (index = 0; index < data.length; index++) {
-    if (data[index] == target) {
-      return index;
-    }
-  }
-  return null;
+let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"]; <br/> <br/>
+let linearAlgorithm = (data, target) => { <br/>
+for (index = 0; index < data.length; index++) { <br/>
+if (data[index] == target) {
+return index;
+}
+<br/>}
+<br/> return null; <br/>
 };
 
 linearAlgorithm(sports, "Baseball");
-```
+
+</p>
 
 <a href="https://dev.to/stephjs/linear-and-binary-search-in-javascript-4b7h" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
 
@@ -82,29 +81,27 @@ The code above is performing a linear search on the elements within an array bas
 
 #### <span style="text-decoration: underline">Binary search algorithm:</span>
 
-<div style="color: black">
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-left: 5%; padding-right: 5%">
 
-```javascript
-let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"];
+let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"]; <br/>
 let alphabeticallyOrderedSportsArray = sports.sort();
 
-let binaryAlgorithm = (data, target) => {
-  let indexBottom = 0;
-  let indexTop = data.length - 1;
-  while (indexBottom <= indexTop) {
-    let indexMiddle = Math.floor((indexBottom + indexTop) / 2);
-    if (data[indexMiddle] == target) {
-      return indexMiddle;
-    } else if (data[indexMiddle] < target) {
-      indexBottom = indexMiddle + 1;
-    } else {
-      indexTop = indexMiddle - 1;
-    }
-  }
-  return null;
-};
+let binaryAlgorithm = (data, target) => { <br/>
+let indexBottom = 0; <br/>
+let indexTop = data.length - 1; <br/>
+while (indexBottom <= indexTop) { <br/>
+let indexMiddle = Math.floor((indexBottom + indexTop) / 2); <br/>
+if (data[indexMiddle] == target) {<br/>
+return indexMiddle;
+<br/>} else if (data[indexMiddle] < target) <br/>{<br/>
+indexBottom = indexMiddle + 1;
+<br/>} else {<br/>
+indexTop = indexMiddle - 1;<br/>
+}<br/>
+}
+return null;
+<br/>};<br/><br/>
 binaryAlgorithm(alphabeticallyOrderedSportsArray, "Rugby");
-```
 
 <a href="https://dev.to/stephjs/linear-and-binary-search-in-javascript-4b7h" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
 
@@ -136,16 +133,16 @@ This type of searching algorithm will make use of the 0(log n) complexity model,
 
 #### <span style="text-decoration: underline">What is the Fibonnacci sequence:</span>
 
-<div style="color: black">
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-left: 5%; padding-right: 5%">
 
-```javascript
-let recursiveFibonacciAlgorithm = (n) => {
-  if (n === 1 || n === 2) return 1;
+<p>
+let recursiveFibonacciAlgorithm = (n) => { <br/>
+  if (n === 1 || n === 2) return 1;<br/>
   return (
     recursiveFibonacciAlgorithm(n - 1) + recursiveFibonacciAlgorithm(n - 2)
-  );
+  );<br/>
 };
-```
+</p>
 
 </div>
 
@@ -157,15 +154,15 @@ is a large number, the reason for this is that in the beginning when the algorit
 
 #### <span style="text-decoration: underline">Another example of a Fibonacci sequence, however this solution is not making use of recursion:</span>
 
-<div style="color: black">
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-left: 5%; padding-right: 5%">
 
-```javascript
-let numbersArray = [1, 1];
-for (index = 2; index < 5; index++) {
-  numbersArray[index] = numbersArray[index - 1] + numbersArray[index - 2];
-}
+<p>
+let numbersArray = [1, 1];<br/><br/>
+for (index = 2; index < 5; index++) {<br/>
+  numbersArray[index] = numbersArray[index - 1] + numbersArray[index - 2];<br/>
+}<br/><br/>
 console.log(numbersArray);
-```
+</p>
 
 </div>
 
