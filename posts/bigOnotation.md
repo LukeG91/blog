@@ -171,6 +171,8 @@ Although the recursive approach has less lines of code, the Big O notation/time 
 
 The other approach whereby I iterate over all of the elements within the array as apposed to using recursion uses alot less memory and as the calculations for the Fibonacci sequence are being done, the function does not require additional memory/space and in turn the big O notation/space complexity model for this approach would be 0(1) as it would remain the same.
 
+In conclusion, the more efficient solution is the iterative solution and not the recursive solution.
+
 <a href="https://syedtousifahmed.medium.com/fibonacci-iterative-vs-recursive-5182d7783055" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
 
 ### <span style="color: red; text-decoration: underline">References:</span>
