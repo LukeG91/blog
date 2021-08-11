@@ -155,7 +155,9 @@ Okay, so you may be thinking that's all good and well but how does this algorith
 calculation. Well, the efficiency of this code is affected when the number that is parsed as an argument into the algorithm
 is a large number, the reason for this is that in the beginning when the algorithm starts to run, the calculations are small, however the growth of the algorithm will double every time the value in the sequence is being calculated to obtain the relevant number in the sequence and in turn this can affect the speed and efficieny of the algorithm. With this being said, another import point to note is that the growth curve can be very large as the argument that is parsed into the algorithm can be a very large number.
 
-**Another example of a Fibonacci sequence,however this solution is not making use of recursion**
+#### <span style="text-decoration: underline">Another example of a Fibonacci sequence,however this solution is not making use of recursion:</span>
+
+<div style="color: black">
 
 ```javascript
 let numbersArray = [1, 1];
@@ -164,6 +166,8 @@ for (index = 2; index < 5; index++) {
 }
 console.log(numbersArray);
 ```
+
+</div>
 
 #### <span style="color: red; text-decoration: underline">According to Big O notation, which algorithm is more efficient?</span>
 
