@@ -36,17 +36,142 @@ let recursiveFibonacciAlgorithm = (n) => {
 
 </div>
 
-The code above is using ES6 syntax and is making use of an arrow function. What the code above is doing is taking in a value(n) and the program is then checking to see if the value entered is equal to either 1 or 2m if it is then a value
-of 1 will be returned. Alternatively if the value entered is neither 1 nor 2, then the recursiveFibonacciAlgorithm() function will run recursively(a function that calls itself) and perform the formula required to return the number in
-the Fibonacci sequence is assigned to the index value that is entered.
+<a href="https://developerinsider.co/big-o-notation-explained-with-examples/" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
+
+## <span style="text-decoration: underline">Linear search algorithms VS binary search algorithms:</span>
+
+#### <span style="text-decoration: underline">Linear search algorithms:</span>
+
+The linear search algorithms in computer science and computer programming are also known as sequential searches and these types of algorithms are used to locate a specific element stored within a list. The way these searches work is by checking each element sequentially until either the matching result has been found or until the search has run through the entire list.
+
+<a href="https://en.wikipedia.org/wiki/Linear_search" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
+
+#### <span style="text-decoration: underline">Binary search algorithms:</span>
+
+The binary search algorithms is at it's a core a <a href="https://en.wikipedia.org/wiki/Search_algorithm" style="color: red; text-decoration: underline">"<em>search algorithm</em>"</a> and it's duty is to locate the position of a specific element/value that is stored within a data structure called a "sorted array".
+The binary search compares the available data by checking the middle value/element within the array as well as checking the target element/value and if these values are not equal then this will mean that the half whereby the target can't lie will be removed and thereafter the binary search will perform the remainder of the search on the other half. The middle element is used to compare against the target value and this process will be repeated until the value/element that is the target has been found. An important point to note is that if the search completes and the remaining half is still empty then this would indicate that the target that is being searched for does not exist within the array.
+
+<a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
+
+## <span style="text-decoration: underline">Code examples of linear and binary search algorithms:</span>
+
+#### <span style="text-decoration: underline">Linear search algorithms:</span>
+
+<div style="color: black">
+
+```javascript
+let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"];
+
+let linearAlgorithm = (data, target) => {
+  for (index = 0; index < data.length; index++) {
+    if (data[index] == target) {
+      return index;
+    }
+  }
+  return null;
+};
+
+linearAlgorithm(sports, "Baseball");
+```
+
+<a href="https://dev.to/stephjs/linear-and-binary-search-in-javascript-4b7h" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+</div>
+
+The code above is performing a linear search on the elements within an array based on a target element. The array to search through and the target are passed into the function as arguments. Although this approach does work and it solves the problem, however is it the most efficient way of solving the problem? Let's find out... looping through each element within the array works, however there could be a massive amount of data within an array which can negatively affect the algorithms performace. In the event where there are hundreds of elements to search through this type of approach would not be best as every element will be searched through which will take time.
+
+#### <span style="text-decoration: underline">Binary search algorithms:</span>
+
+<div style="color: black">
+
+```javascript
+let sports = ["Football", "Rugby", "Baseball", "Swimming", "Hockey"];
+let alphabeticallyOrderedSportsArray = sports.sort();
+
+let binaryAlgorithm = (data, target) => {
+  let indexBottom = 0;
+  let indexTop = data.length - 1;
+  while (indexBottom <= indexTop) {
+    let indexMiddle = Math.floor((indexBottom + indexTop) / 2);
+    if (data[indexMiddle] == target) {
+      return indexMiddle;
+    } else if (data[indexMiddle] < target) {
+      indexBottom = indexMiddle + 1;
+    } else {
+      indexTop = indexMiddle - 1;
+    }
+  }
+  return null;
+};
+binaryAlgorithm(alphabeticallyOrderedSportsArray, "Rugby");
+```
+
+<a href="https://dev.to/stephjs/linear-and-binary-search-in-javascript-4b7h" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+</div>
+
+The code above is taking in a sorted array which is why I needed to use the sort() method to sort the 'sports' array before passing it in as an argument to my binary search function. In order for the search to function correctly we need to keep track of the range of elements that the function will be searching through, to do this I have declared 'indexBottom' and 'indexTop' variables. The 'indexBottom' variable will be set to 0 and the 'indexTop' variable will be set to the amount of elements that the search will need to run through in the array.
+
+The while loop will run until the binary search has been filtered after searching throguh the array to a single element. The index/position of the element is located and found by averaging the 'indexBottom' and 'indexTop' variables, I am making use of the Math.floor() built in JavaScript method in order to ensure that the number is rounded as it is required to be an integer. The code will then return the 'indexMiddle' if the search has found the element that it has been searching for. If the element is not yet found and if the current element comes before the element that the algorithm needs to find (this position is determined by alphabetical order), then the "indexBottom = indexMiddle + 1" alternatively if the element that the algorithm needs to find comes after the current element then the indexTop = indexMiddle - 1 and lastly if the algorithm cannot find the element that it is searching for then this would indicate that the element does not exist within the array and the function will then return "null".
+
+<a href="https://dev.to/stephjs/linear-and-binary-search-in-javascript-4b7h" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+In conclusion and based on the information we have gone through above, the binary searching algorithm method is the more efficient and quicker method for searching for a specific element as the linear search searches through every single element within the data set(array) and in turn if the data set is very large, then the search can take a while to complete.
+
+## <span style="text-decoration: underline">Describing each sorting algorithm listed above using Big O notation:</span>
+
+#### <span style="text-decoration: underline">Linear sorting algorithms:</span>
+
+This type of search algorithm will be represented using the O(n) model and can eveolve to the O(n²) model as the data set can grow exponentially and in turn with each element that there is within the data set/array being used a step is required as each element within the array is searched through when using the linear sorting algorithm functions.
+
+<a href="https://towardsdatascience.com/introduction-to-big-o-notation-820d2e25d3fd" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+#### <span style="text-decoration: underline">Binary sorting algorithms:</span>
+
+This type of searching algorithm will make use of the 0(log n) complexity model(Big O notation), the reason for this is due to the fact that the amount of searching that the algorithm needs to perform increases at a much slower rate then the search list from the data set(sorted array) does. The reason why this is the case is because in the binary searching method the algorithm is constantly halving the search parameters after each search has run.
+
+<a href="https://stackoverflow.com/questions/700241/what-is-the-difference-between-linear-search-and-binary-search" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+## <span style="text-decoration: underline">Let's take a look at a popular algorithm called the Fibonnacci sequence:</span>
+
+#### <span style="text-decoration: underline">What is the Fibonnacci sequence:</span>
+
+<div style="color: black">
+
+```javascript
+let recursiveFibonacciAlgorithm = (n) => {
+  if (n === 1 || n === 2) return 1;
+  return (
+    recursiveFibonacciAlgorithm(n - 1) + recursiveFibonacciAlgorithm(n - 2)
+  );
+};
+```
+
+</div>
+
+The code above is using ES6 syntax and is making use of an arrow function. What the code above is doing is taking in a value(n) and the program is then checking to see if the value entered is equal to either 1 or 2 if it is then a value of 1 will be returned. Alternatively if the value entered is neither 1 nor 2, then the recursiveFibonacciAlgorithm() function will run recursively(a function that calls itself) and perform the formula required to return the number in the Fibonacci sequence is assigned to the index value that is entered.
 
 Okay, so you may be thinking that's all good and well but how does this algorithm tie in with the quadratic time(O(n²))
 calculation. Well, the efficiency of this code is affected when the number that is parsed as an argument into the algorithm
-is a large number, the reason for this is that in he beginning when the algorithm starts to run, the calculations are small, however the growth of the algorithm will double every time the value in the sequence is being calculated to obtain the relevant number in the sequence and in turn this can affect the speed and efficieny of the algorithm. With this being said, another import point to note is that the growth curve can be very large as the argument that is parsed into the algorithm can be a very large number.
+is a large number, the reason for this is that in the beginning when the algorithm starts to run, the calculations are small, however the growth of the algorithm will double every time the value in the sequence is being calculated to obtain the relevant number in the sequence and in turn this can affect the speed and efficieny of the algorithm. With this being said, another import point to note is that the growth curve can be very large as the argument that is parsed into the algorithm can be a very large number.
 
-<a href="https://developerinsider.co/big-o-notation-explained-with-examples/" style="color: red; text-decoration: underline" target="_blank"><em>Original source</em></a>
+**Another example of a Fibonacci sequence,however this solution is not making use of recursion**
 
-#### <span style="text-decoration: underline">Let's look at an example:</span>
+```javascript
+let numbersArray = [1, 1];
+for (index = 2; index < 5; index++) {
+  numbersArray[index] = numbersArray[index - 1] + numbersArray[index - 2];
+}
+console.log(numbersArray);
+```
+
+#### <span style="color: red; text-decoration: underline">According to Big O notation, which algorithm is more efficient?</span>
+
+Although the recursive approach has less lines of code, the Big O notation/time complexity for the recursive function is O(n) which can become exponential if there is a very large amount of elements in the data set(array) that needs to be searched through.
+
+The other approach whereby I iterate over all of the elements within the array as apposed to using recursion uses alot less memory and as the calculations for the Fibonacci sequence are being done, the function does not require additional memory/space and in turn the big O notation/space complexity model for this approach would be 0(1) as it would remain the same.
+
+<a href="https://syedtousifahmed.medium.com/fibonacci-iterative-vs-recursive-5182d7783055" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
 
 ### <span style="color: red; text-decoration: underline">References:</span>
 
@@ -71,4 +196,3 @@ is a large number, the reason for this is that in he beginning when the algorith
 <a href="https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation" style="color: white" target="_blank">rob-bell.net</a>
 </li>
 </div>
-```
