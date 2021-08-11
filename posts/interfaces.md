@@ -21,6 +21,40 @@ In summary, the role of an interface is to stipulate the functions/operations th
 
 - Another reason that Software developers may chose to use interfaces is that it can also be used toimplement "strict typing" to a certain extent.
 
+## <span style="text-decoration: underline">Let's take a look at why JavaScript doesn't really use interfaces as well as how objects are created with JavaScript:</span>
+
+#### <span style="text-decoration: underline">Why JavaScript doesn't really use interfaces:</span>
+
+The JavaScript programming language is not an object-oriented programming language but is rather an object-based programming labguage which is based on prototypes. Interfaces are not really used within the JavaScript programming language due to the fact that interfaces are normally used within programming languages that are object-oriented based.
+
+<a href="https://hackernoon.com/implementing-interfaces-in-javascript-with-implement-js-8746838f8caa" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+#### <span style="text-decoration: underline">How objects are created with JavaScript:</span>
+
+In the JavaScript programming language an object gets created using a class which is basically a blueprint that will be used to create objects. The class will specify the data/attributes as well as the methods that the objects need to contain.
+
+#### <span style="text-decoration: underline">Example code below to illustrate how objects are created:</span>
+
+<div style="color: black; background-color: #fff; overflow-x: auto; word-wrap: break-word; word-break: break-word; width: 95%; height: 95%; padding-left: 5%; padding-right: 5%; margin-top: 1%">
+<p>
+class Sports { <br/>
+    constructor(sport){<br/>
+        this.sport = sport;<br/>
+    }<br/><br/>
+displayFavouriteSport(){<br/>
+        console.log(`Your favourite sport is ${this.sport}`);<br/>
+    }
+    
+}
+
+const Football = new Sports("Football");
+
+Football.displayFavouriteSport()
+
+</p>
+
+</div>
+
 ### <span style="color: red; text-decoration: underline">References:</span>
 
 <div style="font-size: 12px; color: red">
