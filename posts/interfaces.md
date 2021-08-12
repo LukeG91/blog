@@ -5,7 +5,7 @@ excerpt: "This article discusses interfaces in object oriented programming langu
 cover_image: "/images/posts/interfaces.jpg"
 ---
 
-## <span style="text-decoration: underline">What is an interface in computer programming anf what are the benefits of using interfaces in OOP:</span>
+## <span style="text-decoration: underline">What is an interface in computer programming and what are the benefits of using interfaces in OOP:</span>
 
 Interfaces are a very important and key part of object oriented programming(OOP) and they are used to specify which attributes(properties and methods) a class needs to carry out.
 
