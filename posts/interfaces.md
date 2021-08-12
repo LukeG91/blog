@@ -55,12 +55,52 @@ Football.displayFavouriteSport()
 
 </div>
 
+## <span style="text-decoration: underline">How to emulate interfaces using JavaScript:</span>
+
+There are a few ways that interfaces can be emulated in JavaScript, the methods we will be discussing today are namely comments, sttribute checking as well as duck typing.
+
+#### <span style="text-decoration: underline">Comments:</span>
+
+This approach is an approach that is fairly simple to implement however the efficacy of this method is not great. This style of emulating interfaces mirrors the methodology of some other object-oriented progrmming languages, in order to avoid syntactical errors, the implementation keywords as well the interface information are commented out.
+
+As mentioned above, the efficacy of this approach is not very comforting as this approach does not clarify if the required set of methods are being implemented.
+
+There are howver some positive aspects to this approach which include it being a straight forward method to implement, no additional functions or classes will be needed, another plus side to this approach is that the interfaces are documented and due to this you can reuse the information if/when needed. Another plus to this approach is the size of the file as well as the speed at which the code will run will be unaffected.
+
+<a href="https://jscriptpatterns.blogspot.com/2013/01/javascript-interfaces.html" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+#### <span style="text-decoration: underline">Attribute checking:</span>
+
+This approach/methodology by nature is more strict than the previous approach that we looked at, the reason I say that is because with the 'attribute checking' approach classes will need to specify which interfaces they are going to implement, these specifications can then be verified by the objects that are going to work with the classes that are going to be implemented. The interfaces are comments, however attributes can be examined to clarify which interfaces a class will be implementing. This approach will ensure that the arguments that are parsed into functions are a specific data type, if there are issues such as the required interface not being declared, then an error will be encountered.
+
+Some of the benefits to this approach include being able to see which interface a class will be using as the interfaces are documented, if the class is missing a specific declaration for example, then an error will shown to the developer which they can use to move in the correct direction in order to resolve the issue.
+
+In summary, this approach offers a good plus side to it, however this is a downside that is good to be aware of. The downside is that the developer doesn't ensure that the specific class actually implements what is in the interface. An important point to note is that it is important to always remember to add the method that is needed as if you forget to do this, then the pre-flight checks will pass however there will be issues in the code as the method won't be present.
+
+<a href="https://jscriptpatterns.blogspot.com/2013/01/javascript-interfaces.html" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
+#### <span style="text-decoration: underline">Duck typing:</span>
+
+A fun fact is that this approach was named after the saying "if it walks like a duck and quacks like a duck, it's a duck." <a href="https://jscriptpatterns.blogspot.com/2013/01/javascript-interfaces.html" target="_blank" style="color: red; text-decoration: underline">"<em>original source</em>"</a>
+This approach is used to clarify if a particullar object is from a specific class based on the methods that it implements, the duck typing method is also set to clarify if a specific class is setup to use an interface. To simplify what this approach is meant to do, it's role is primarly to check if an objects has mthods that are the same as listed in the interface, this will result in that particular interface then being implemented.
+
+The duck typing approach will take in a function that contains two or more arguments, the first would symbolise the object you are checking against and the remainder of the arguments will be the interfaces that are going to be compared with the first object. Checks will be performed and if there are methods that are not present, then an error will be thrown which will contain both the name of the method that is not present as well as the interface that has not been implemented correctly.
+
+While this approach is likely the most beneficial/helpful approach to use, there are a few downsides that also need to be mentioned. The code does not have a high rate of reusability as in this approach classes don't stipulate which interface they implement. This methodology also does not clarify the arguments that the methods make use of, only the method name is checked to ensure that it is correct.
+
+<a href="https://jscriptpatterns.blogspot.com/2013/01/javascript-interfaces.html" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
+
 ### <span style="color: red; text-decoration: underline">References:</span>
 
 <div style="font-size: 12px; color: red">
 <br/>
 <li>
 <a href="https://www.dropbox.com/home/Luke%20-59210/Full%20Stack%20Web%20Developer/Task%2020?preview=WD+L3T20+-+Interview+Prep_+Interfaces.pdf" style="color: white" target="_blank">hyperiondev.com</a>
+</li>
+
+<br/>
+<li>
+<a href="https://jscriptpatterns.blogspot.com/2013/01/javascript-interfaces.html" style="color: white" target="_blank">jscriptpatterns.blogspot.com</a>
 </li>
 
 </div>
