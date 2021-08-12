@@ -15,11 +15,14 @@ In summary, the role of an interface is to stipulate the functions/operations th
 
 #### <span style="text-decoration: underline">Benefits of using interfaces in OOP:</span>
 
+<div style="font-size: 14px">
+
 - Software developers make use of interfaces in order to achieve abstraction, which involves only presenting/displaying the data that is needed for a specific operation and hiding the data in the object that is not needed/not relevant from the user. Due to this, interfaces are known for being able to hide the attributes/parts of the object that are not needed.
 
 - Software developers also like to implement the use of interfaces in order to ensure that classes are structured according to specific guidelines which stipulate which properties and methods need to be used.
 
 - Another reason that Software developers may choose to use interfaces is that it can also be used to implement "strict typing" to a certain extent.
+</div>
 
 ## <span style="text-decoration: underline">Let's take a look at why JavaScript doesn't really use interfaces as well as how objects are created with JavaScript:</span>
 
@@ -96,10 +99,14 @@ Strict mode was introduced into JavaScript is ES5 and it provides a platform for
 
 Now that we know what "strict mode" is let's take a look at some of the reasons as to why we would make use of it:
 
+<div style="font-size: 14px">
+
 - It will prevent certain sytax that is defined in later versions of ES(ECMAScript).
 - It can sometimes result in quicker running code when compared to the same code that is not using strict mode.
 - It also plays a role in trying to help correct errors that make it more challenging for the JavaScript engines to run optimally.
 - Another feature that it provides is the ability to get rid of certain JavaScript silent errors, this is done by throwing errors when errors are encountered.
+
+</div>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode" style="color: red; text-decoration: underline" target="_blank"><em>Information source</em></a>
 
